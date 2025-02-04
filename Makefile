@@ -3,7 +3,8 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 format:
-	#code formatting
+	#code formatting using black
+	black *.py mylib/*.py
 lint:
 	#pylint
 test:

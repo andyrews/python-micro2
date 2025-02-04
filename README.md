@@ -1,3 +1,5 @@
+[![Python app test with Git Actions](https://github.com/andyrews/python-micro2/actions/workflows/devops.yaml/badge.svg)](https://github.com/andyrews/python-micro2/actions/workflows/devops.yaml)
+
 # python-micro2
 
 
