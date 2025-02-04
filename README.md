@@ -8,3 +8,4 @@
 1. Create Python Virtual Env
 2. Create Files: "Makefile", "requirements.txt", "main.py", "Dockerfile", "mylib/init"
 3. Populate "Makefile"
+4. Setup CI
