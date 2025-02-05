@@ -1,4 +1,4 @@
-from mylib.logic import *
+from mylib.logic import wiki, search_wiki
 from fastapi import FastAPI
 
 import uvicorn
