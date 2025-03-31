@@ -17,7 +17,7 @@ build:
 	docker build -t deploy-wiki .
 run:
 	#running docker
-	docker run -p 127.0.0.1:8080:8080 deploy-wiki
+	docker run -p 127.0.0.1:8000:8000 deploy-wiki
 deploy:
 	#AWS ECR
 	aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 985539758891.dkr.ecr.us-east-1.amazonaws.com
