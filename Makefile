@@ -25,7 +25,7 @@ build:
 run:
 	#running docker
 	. venv/bin/activate && \
-	docker run -p 127.0.0.1:8000:8000 deploy-wiki
+	docker run -d -p 127.0.0.1:8000:8000 deploy-wiki
 deploy:
 	#AWS ECR
 	aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 985539758891.dkr.ecr.us-east-1.amazonaws.com
