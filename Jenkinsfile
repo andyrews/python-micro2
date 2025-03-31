@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'make install'
+        sh '''sudo apt-get update && sudo apt-get install -y make
+make install'''
       }
     }
 
