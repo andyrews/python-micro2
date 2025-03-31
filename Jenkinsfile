@@ -9,6 +9,8 @@ pipeline {
                         apt-get update
                         echo "Installing necessary packages..."
                         apt-get install -y make python3 python3-pip
+                        echo "Installing virtualenv"
+                        apt install python3.11-venv
                     '''
                 }
 
