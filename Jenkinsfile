@@ -1,12 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      steps {
-        sh '''sudo apt-get update && sudo apt-get install -y make
-make install'''
-      }
+    agent {
+        docker {
+            image 'buildpack-deps:latest' // Contains make, gcc, and other build tools
+        }
     }
-
-  }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'make install'
+            }
+        }
+    }
 }
