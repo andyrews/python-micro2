@@ -8,23 +8,23 @@ install:
 
 format:
 	#code formatting using black
-	. venv/bin/activate
+	. venv/bin/activate && \
 	black *.py mylib/*.py
 lint:
 	#pylint
-	. venv/bin/activate
+	. venv/bin/activate && \
 	pylint --disable=R,C *.py mylib/*.py
 test:
 	#pytest
-	. venv/bin/activate
+	. venv/bin/activate && \
 	python -m pytest -vv --cov=mylib --cov=main test_*.py
 build:
 	#build container
-	. venv/bin/activate
+	. venv/bin/activate && \
 	docker build -t deploy-wiki .
 run:
 	#running docker
-	. venv/bin/activate
+	. venv/bin/activate && \
 	docker run -p 127.0.0.1:8000:8000 deploy-wiki
 deploy:
 	#AWS ECR
