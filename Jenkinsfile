@@ -6,9 +6,9 @@ pipeline {
         script {
                     sh '''
                         echo "Updating package lists..."
-                        sudo apt-get update
+                        apt-get update
                         echo "Installing necessary packages..."
-                        sudo apt-get install -y make python3 python3-pip
+                        apt-get install -y make python3 python3-pip
                     '''
                 }
 
