@@ -4,11 +4,13 @@ pipeline {
     stage('Setup Environment') {
       steps {
         script {
-          sh '''
-apk update
-apk add --no-cache bash make python3 py3-pip
-'''
-        }
+                    sh '''
+                        echo "Updating package lists..."
+                        sudo apt-get update
+                        echo "Installing necessary packages..."
+                        sudo apt-get install -y make python3 python3-pip
+                    '''
+                }
 
       }
     }
