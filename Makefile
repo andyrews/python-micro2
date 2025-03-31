@@ -1,8 +1,12 @@
 install:
 	#pip installing
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt &&\
-		python -m textblob.download_corpora
+	install:
+	python3 -m venv venv && \
+	source venv/bin/activate && \
+	pip install --upgrade pip && \
+	pip install -r requirements.txt && \
+	python -m textblob.download_corpora
+
 format:
 	#code formatting using black
 	black *.py mylib/*.py
